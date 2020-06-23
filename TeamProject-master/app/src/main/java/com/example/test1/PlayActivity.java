@@ -22,7 +22,6 @@ public class PlayActivity extends AppCompatActivity {
 
     private Button btn_search;
 
-
     private StorageReference mStorageRef;
     private VideoView mainVideoView;
     private ImageView playBtn;
@@ -68,7 +67,7 @@ public class PlayActivity extends AppCompatActivity {
         durationTimer = (TextView) findViewById(R.id.durationTimer);
         bufferProgress = (ProgressBar) findViewById(R.id.bufferProgress);
 
-        videoUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/fir-videostreaming-1ff30.appspot.com/o/NC%20Dinos%20vs%20Samsung%20Lions%20Highlights%20_%20KBO%20Baseball%20Opening%20Day%20on%20ESPN.mp4?alt=media&token=284bbd07-a251-49b6-84cb-237568e4b7cb");
+        videoUri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/loginex-67236.appspot.com/o/%EC%83%98%ED%94%8C%20%EC%98%81%EC%83%81.mp4?alt=media&token=5ca0c338-4ba3-4d89-a910-2b2f2c0d3126");
 
         mainVideoView.setVideoURI(videoUri);
         mainVideoView.requestFocus();
@@ -115,6 +114,7 @@ public class PlayActivity extends AppCompatActivity {
                 if(isPlaying) {
 
                     mainVideoView.pause();
+                    bufferProgress.setVisibility(View.INVISIBLE);
                     isPlaying = false;
                     playBtn.setImageResource(R.drawable.play_action);
 

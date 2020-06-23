@@ -71,7 +71,7 @@ public class UploadActivity extends AppCompatActivity implements SurfaceHolder.C
                 .check();
 
         btn_record = (Button)findViewById(R.id.btn_record);
-        btn_upload = (Button)findViewById(R.id.btn_upload);
+        //btn_upload = (Button)findViewById(R.id.btn_upload);
 
         btn_record.setOnClickListener(new View.OnClickListener() {
             @Override
